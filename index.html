@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap início -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7e0aec78ae.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="index.js" defer></script>
+    <title>Produtos</title>
+</head>
+<body class="bg-dark class">
+    <header class="navbar navbar-expand-md navbar-dark bg-dark ">
+
+        <a class="navbar-brand" href="#"><img src="img/buy-logo2.svg" alt="" width="150px"></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target">
+            <span class="ml-auto navbar-toggler-icon"></span>
+        </button>
+        
+        <nav class="collapse navbar-collapse" id="nav-target">
+            <ul class=" navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link active ">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#users" class="nav-link" onclick="mostrar()"> Alterar Usuário </a>
+                </li>
+                <div>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> 
+                            <i class="fa-solid fa-cart-shopping fa-x2l" style="color: #fff;"></i>
+                            <span class="badge text-danger" id="carrinho"> 
+                            </span>
+                        </a>
+                    </li>
+
+                    <div class="item-menu" id="carrinho">sdfsdf</div>
+
+                </div>
+                
+
+            </ul>
+
+        </nav>
+
+    </header>
+    
+    <main class="container mt-5" id="main">
+        <section class="row justify-content-end align-itens-start">
+            <select id="users" class="bg-white text-dark"  onchange="saudar(value)">
+                <option value="">Selecione</option>
+            </select>
+        </section>
+    </main>
+    <section class="container-full ">
+        <article  id="caixa" class="row justify-content-center mt-5 align-items-center"></article>
+    </section>
+    
+    <section class=" side-bar">
+
+    </section>
+
+
+    <!-- Modal Erro -->
+    <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="gravacaoAceitaLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title text-warning" id="modalLabel">Usuário Inválido</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-text"> Não foi possível adicionar o item ao carrinho, favor altere para um usuário válido </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning"  data-dismiss="modal" id="btn_modal">Vou Alterar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap fim -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
